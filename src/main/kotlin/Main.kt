@@ -4,24 +4,24 @@ fun main() {
 fun pervaya(string: String): String {
     var result = ""
     var count = 1
-    var s = string[0]
+    var a = string[0]
     for (item in string.substring(1)) {
-        if (s != item) {
+        if (a != item) {
             if (count > 1) {
-                result += "$s$count"
+                result += "$a$count"
             } else {
-                result += s
+                result += a
             }
             count = 1
-            s = item
+            a = item
         } else {
             count++
         }
     }
     if (count > 1) {
-        result += "$s$count"
+        result += "$a$count"
     } else {
-        result += s
+        result += a
     }
     return result
 }
